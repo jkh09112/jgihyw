@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1d;
+  color: #e6e6e6;
+}
+
+.room-container {
+  display: none;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.room-container.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.puzzle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 2px solid #ffcc00; /* 밝은 테두리 */
+  border-radius: 4px;
+  background-color: #222; /* 어두운 배경 */
+  color: #ffffff;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #ff6f61; /* 포커스 시 밝은 색상 강조 */
+  box-shadow: 0px 0px 8px rgba(255, 111, 97, 0.5); /* 포커스 시 빛나는 효과 */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff5a4d;
+}
+
+.hint {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 204, 0, 0.2);
+  color: #ffcc00;
+  font-style: italic;
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

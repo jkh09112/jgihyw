@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방 탈출 퍼즐 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room-container active" id="room1">
+      <h1>방 1</h1>
+      <p class="puzzle">타티온이 해킹한 날짜는?</p>
+      <input type="text" id="answer1" placeholder="정답 입력" />
+      <button onclick="checkAnswer(1)">제출</button>
+      <div class="hint" id="hint1">힌트: 힌트 2023년 2월입니다</div>
+    </div>
+
+    <div class="room-container" id="room2">
+      <h1>방 2</h1>
+      <p class="puzzle">다음 문제를 풀어보세요...</p>
+      <!-- 다음 방의 콘텐츠 추가 -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
